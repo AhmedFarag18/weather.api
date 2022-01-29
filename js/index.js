@@ -42,7 +42,6 @@ $(document).ready(function() {
                 format: "json"
             },
             success: function(data) {
-                console.log(data);
 
                 $(".location").text(`${data.location.name}`);
                 $(".mintemp_c2").html(data.forecast.forecastday[1].day.mintemp_c + "<sup>o</sup>C");
@@ -64,28 +63,3 @@ $(document).ready(function() {
     });
 
 });
-
-
-
-
-
-//  // get the day and add in card 1
-//           var allDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-//           var d = new Date(data.dt * 1000); // to get the DateTime. 
-//           var dayName = allDays[d.getDay()]; // It will give day index, and based on index we can get day name from the array. 
-//           $(".currentDay").text(dayName);
-
-
-//           // add date in first card
-//           today = dateFormat2(new Date());
-//           $(".date").text(today);
-
-// var icon_weather = 0;
-// var monthShortNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-//     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-// ];
-
-// function dateFormat2(d) {
-//     var t = new Date(d);
-//     return t.getDate() + ' ' + monthShortNames[t.getMonth()] + ', ' + t.getFullYear();
-// }
