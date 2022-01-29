@@ -1,6 +1,3 @@
-// var myKey = `fa62b5264546453aa2e124620222901`;
-
-
 // function to get the [ Day Name ] 
 function getDayName(date = new Date(), locale = 'en-US') {
     return date.toLocaleDateString(locale, { weekday: 'long' });
@@ -11,7 +8,7 @@ $(document).ready(function() {
     // make and return data about  cairo and show it when load the page
     $.ajax({
         type: "GET",
-        url: `http://api.weatherapi.com/v1/forecast.json?key=fa62b5264546453aa2e124620222901&q=cairo&days=3&aqi=no&alerts=no`,
+        url: `https://api.weatherapi.com/v1/forecast.json?key=fa62b5264546453aa2e124620222901&q=cairo&days=3&aqi=no&alerts=no`,
         data: {
             format: "json"
         },
@@ -40,7 +37,7 @@ $(document).ready(function() {
     $("#submit").click(function() {
         $.ajax({
             type: "GET",
-            url: `http://api.weatherapi.com/v1/forecast.json?key=fa62b5264546453aa2e124620222901&q=${$("#search").val()}&days=3&aqi=no&alerts=no`,
+            url: `https://api.weatherapi.com/v1/forecast.json?key=fa62b5264546453aa2e124620222901&q=${$("#search").val()}&days=3&aqi=no&alerts=no`,
             data: {
                 format: "json"
             },
