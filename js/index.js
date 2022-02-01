@@ -21,7 +21,7 @@ $(document).ready(function() {
 
             for (let i = 0; i < 3; i++) {
                 $(`.maxtemp_c${i+1}`).html(data.forecast.forecastday[i].day.maxtemp_c + `<sup>o</sup>C`);
-                $(`.icon_weather${i+1}`).attr(`src`, `http:` + data.forecast.forecastday[i].day.condition.icon);
+                $(`.icon_weather${i+1}`).attr(`src`, `https:` + data.forecast.forecastday[i].day.condition.icon);
                 $(`.day${i+1}`).text(getDayName(new Date(`${data.forecast.forecastday[i].date}`)))
                 $(`.custom${i+1}`).text(data.forecast.forecastday[i].day.condition.text);
             }
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
                 for (let i = 0; i < 3; i++) {
                     $(`.maxtemp_c${i+1}`).html(data.forecast.forecastday[i].day.maxtemp_c + `<sup>o</sup>C`);
-                    $(`.icon_weather${i+1}`).attr(`src`, `http:` + data.forecast.forecastday[i].day.condition.icon);
+                    $(`.icon_weather${i+1}`).attr(`src`, `https:` + data.forecast.forecastday[i].day.condition.icon);
                     $(`.day${i+1}`).text(getDayName(new Date(`${data.forecast.forecastday[i].date}`)))
                     $(`.custom${i+1}`).text(data.forecast.forecastday[i].day.condition.text);
                 }
